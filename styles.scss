@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+.link-animate{
+    &::after{
+        content:'';
+        display: block;
+        width: 0;
+        height: 0.2vh;
+        background: black;
+        transition: width .4s;
+    }
+    &:hover::after{
+        width: 100%;
+        transition: width .4s;
+    }
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .links{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        .link{
+            text-decoration: none;
+            color: black;
+            font-size: 4.2vw;
+            display: inline-block;
+            &:nth-child(2){
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+
+}
+
+.me{
+    background-image: linear-gradient(to top left, #00899E, #3DFFDE);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    #profile-image{
+        width: 40%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: solid rgb(0, 138, 148) 0.2vh;
+    }
+    
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #my-name, #description{
+            color: white;
+            font-weight: normal;
+        }
+
+        #my-name{
+            font-size: 4.7vw;
+        }
+
+        #description{
+            font-size: 1.79vw;
+            text-align: center;
+            width: 65%;
+        }
+    }
+}
+
+// Portofolio page
+
+section#portofolio-page{
+    display: grid;
+    grid-template-columns: 20.8vw 1fr 20.8vw;
+    .portofolio{
+
+        #sideways{
+            position: sticky;
+            top: 20vh;
+            font-size: 10.5vh;
+            font-weight: normal;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin-top: 20vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .content{
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding-top: 12vh;
+        padding-bottom: 12vh;
+        margin: auto;
+        .box{
+            height: 10.5vw;
+            width: 24vw;
+            border-radius: 20px;
+            background-color: #00000013;
+
+            &:nth-child(odd){
+                &:last-child{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    justify-self: center;
+                }
+            }
+        }
+
+        h3{
+            &:only-child{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+
+
+    }
+
+    .nav-two{
+        margin-right: 40px;
+        margin-top: 75vh;
+        .links-two{
+            position: sticky;
+            top: 75vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            list-style-type: none;
+            .link{
+                text-decoration: none;
+                text-align: end;
+                font-size: 4.2vw;
+                color: black;
+            }
+        }
+    }
+}
