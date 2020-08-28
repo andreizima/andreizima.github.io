@@ -7,6 +7,10 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
 .link-animate::after {
   content: '';
   display: block;
@@ -120,14 +124,14 @@ main {
   width: 65%;
 }
 
-section#portofolio-page {
+section#main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20.8vw 1fr 20.8vw;
       grid-template-columns: 20.8vw 1fr 20.8vw;
 }
 
-section#portofolio-page .portofolio #sideways {
+section#main .portofolio #sideways {
   position: -webkit-sticky;
   position: sticky;
   top: 20vh;
@@ -142,7 +146,7 @@ section#portofolio-page .portofolio #sideways {
   margin-right: auto;
 }
 
-section#portofolio-page .content {
+section#main .content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -153,14 +157,14 @@ section#portofolio-page .content {
   margin: auto;
 }
 
-section#portofolio-page .content .box {
+section#main .content .box {
   height: 10.5vw;
   width: 24vw;
   border-radius: 20px;
   background-color: #00000013;
 }
 
-section#portofolio-page .content .box:nth-child(odd):last-child {
+section#main .content .box:nth-child(odd):last-child {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -168,21 +172,21 @@ section#portofolio-page .content .box:nth-child(odd):last-child {
       justify-self: center;
 }
 
-section#portofolio-page .content h3:only-child {
+section#main .content h3:only-child {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
 }
 
-section#portofolio-page .nav-two {
+section#main .nav-two {
   margin-right: 40px;
-  margin-top: 75vh;
+  margin-top: 65vh;
 }
 
-section#portofolio-page .nav-two .links-two {
+section#main .nav-two .links-two {
   position: -webkit-sticky;
   position: sticky;
-  top: 75vh;
+  top: 65vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,10 +200,77 @@ section#portofolio-page .nav-two .links-two {
   list-style-type: none;
 }
 
-section#portofolio-page .nav-two .links-two .link {
+section#main .nav-two .links-two .link {
   text-decoration: none;
   text-align: end;
   font-size: 4.2vw;
   color: black;
+}
+
+section#main .nav-two .links-two #addbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 83vh;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-radius: 1vw;
+  padding: .3vw;
+  background: none;
+  font-size: 1vw;
+  cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+section#main .nav-two .links-two #addbox:hover {
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+  background-color: black;
+  color: white;
+}
+
+section#main .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#main .contact #contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section#main .contact #contact-form .input-field {
+  width: 15vw;
+  height: 2vw;
+  border: 1px solid black;
+  border-radius: 1vw;
+  text-align: center;
+}
+
+section#main .contact #contact-form #message-field {
+  width: 15vw;
+  height: 10vw;
+  border: 1px solid black;
+  border-radius: 1vw;
 }
 /*# sourceMappingURL=styles.css.map */

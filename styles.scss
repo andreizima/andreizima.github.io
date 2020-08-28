@@ -6,6 +6,11 @@
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
 .link-animate{
     &::after{
         content:'';
@@ -20,6 +25,8 @@
         transition: width .4s;
     }
 }
+
+// Home page
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,7 +92,7 @@ main{
 
 // Portofolio page
 
-section#portofolio-page{
+section#main{
     display: grid;
     grid-template-columns: 20.8vw 1fr 20.8vw;
     .portofolio{
@@ -140,10 +147,10 @@ section#portofolio-page{
 
     .nav-two{
         margin-right: 40px;
-        margin-top: 75vh;
+        margin-top: 65vh;
         .links-two{
             position: sticky;
-            top: 75vh;
+            top: 65vh; // 75 normal
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -154,6 +161,55 @@ section#portofolio-page{
                 font-size: 4.2vw;
                 color: black;
             }
+            
+        #addbox{
+            display: flex;
+            position: sticky;
+            top: 83vh;
+            margin-top: 5vh;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+            border-radius: 1vw;
+            padding: .3vw;
+            background: none;
+            font-size: 1vw;
+            cursor: pointer;
+            transition: ease .3s;
+            &:hover{
+                transition: ease .3s;
+                background-color: black;
+                color: white;
+            }
+        }
+        }
+    }
+
+    .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #contact-form{
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            .input-field{
+                width: 15vw;
+                height: 2vw;
+                border: 1px solid black;
+                border-radius: 1vw;
+                text-align: center;
+            }
+            #message-field{
+                width: 15vw;
+                height: 10vw;
+                border: 1px solid black;
+                border-radius: 1vw; 
+            }
         }
     }
 }
+
+// Hire Me page
+
